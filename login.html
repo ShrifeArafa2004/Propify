@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100%;
+      height: auto;
+      background-color: #141414;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      width: 600px;
+      height: 600px;
+      background-color: #262626;
+      border: 1px solid #eee;
+      margin-top: 20px;
+    }
+    .form-control {
+      width: 50%;
+      background-color: #eee;
+      margin: auto;
+    }
+    label {
+      display: block;
+      width: 300px;
+      margin: auto;
+    }
+    h2 {
+      text-align: left;
+    
+      color: #eee;
+      display: block;
+      width: 300px;
+      margin: auto;
+      font-weight: lighter;
+    
+    }
+    h1 {
+      color: #eee;
+      text-align: center;
+      font-weight: lighter;
+      margin-top: 10px;
+      
+    }
+    
+    label {
+      color: #eee;
+    }
+    button {
+      width: 300px;
+      display: block;
+      margin: auto;
+      padding: 6px;
+      background-color: #703BF7;
+      border-radius: 4px;
+      outline: none;
+      border: none;
+      color: #eee;
+    }
+    .login-icons {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin-top: 20px;
+    }
+    .login-icons i {
+      width: 100px;
+      height: 50px;
+      background-color: #eee;
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      color: #703BF7;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .adds {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .adds a {
+      text-decoration: none;
+      padding: 0 10px;
+      color: #eee;
+      font-weight: bold;
+    }
+    .form-label{
+        margin-top: 20px;
+    }
+    a{
+      color: #eee;
+      text-decoration: none;
+    }
+    .navbar-nav .nav-link {
+      color: #e0e0e0 !important;
+      margin-right: 15px;
+      transition: 0.3s;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #6c3fd7 !important;
+    }
+    a{color: #eee;}
+
+  </style>
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form action="/"method="post"autocomplete="no">
+            <h1>Propify</h1>
+            <h2>Login</h2>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <label class="form-check-label" for="exampleCheck1">              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                i agree with this steps </label>
+            </div>
+            <button type="" class="bt"><a href="home.html">Submit</a> </button>
+            <label for=""class="adds">or login with</label>
+            <div class="login-icons">
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <label for=""class="adds">Create an account?<a href="sign">Create an account</a></label>
+          </form>
+    </section>
+</body>
+</html>

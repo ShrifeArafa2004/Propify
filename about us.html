@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #1c1c1c;
+        color: #e0e0e0;
+        height: auto;
+        width: 1005;
+      }
+      .container {
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+      }
+      header {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+      }
+      header section {
+        width: 50%;
+      }
+
+      .section-title {
+        font-size: 2em;
+        margin: auto;
+
+        margin-bottom: 10px;
+        width: 80%;
+      }
+      .section-subtitle {
+        margin-bottom: 30px;
+        color: #888;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        width: 80%;
+        margin: auto;
+      }
+      footer {
+        width: 100%;
+      }
+      .card {
+        background-color: #1c1c1c;
+        padding: 20px;
+        border-radius: 2px;
+        border: 1px solid #ffffff31;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      }
+      .card-title {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: #eee;
+      }
+      .card-description {
+        color: #aaa;
+      }
+      .why-choose-us {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        margin-top: 100px;
+      }
+      .why-choose-us div {
+        text-align: center;
+        padding: 10px;
+        background-color: #1c1c1c;
+        border-radius: 10px;
+        transition: transform 0.3s;
+      }
+      .why-choose-us div:hover {
+        transform: scale(1.05);
+      }
+      h1 {
+        margin-top: 100px;
+      }
+      .navbar li a {
+        color: #fff;
+        font-size: smaller;
+        font-family: sans-serif;
+      }
+
+      .navbar-brand {
+        color: #eee;
+        font-size: 25px;
+      }
+      h3 {
+        color: #eee;
+      }
+      .navbar i {
+        background-color: #6a0dad;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      li a:hover {
+        color: #fff;
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section {
+        margin-top: 50px;
+      }
+      .header h1 {
+        font-weight: lighter;
+        font-size: 20px;
+      }
+      #rep {
+        display: block;
+        margin: auto;
+      }
+      header section div {
+        color: #fff;
+      }
+      h2 {
+        text-align: center;
+      }
+      .navbar-nav .nav-link {
+        color: #e0e0e0 !important;
+        margin-right: 15px;
+        transition: 0.3s;
+      }
+      a{color: #eee;}
+
+      .navbar-nav .nav-link:hover {
+        color: #6c3fd7 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Propify</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../html/home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about us.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Browse_poperties.html"
+                  >Properties</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./services.html">Services</a>
+              </li>
+              <li>
+                <a href="./profile.html"><i class="fa-solid fa-user"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section>
+        <h2 class="section-title">Our Values</h2>
+        <div class="grid">
+          <div class="card">
+            <h3 class="card-title">Trust</h3>
+            <p class="card-description">
+              Trust is the cornerstone of every successful real estate
+              transaction.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Excellence</h3>
+            <p class="card-description">We set the bar high for ourselves...</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Client-Centric</h3>
+            <p class="card-description">
+              Your dreams and needs are at the center of our universe.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Our Commitment</h3>
+            <p class="card-description">
+              We are dedicated to providing you with professionalism and
+              support.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section>
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="why-choose-us">
+          <div>
+            <h3>Find your future home</h3>
+            <p>Explore properties and find your perfect place.</p>
+          </div>
+          <div>
+            <h3>Experienced Agents</h3>
+            <p>Find experts to guide you.</p>
+          </div>
+          <div>
+            <h3>Buy or Rent Homes</h3>
+            <p>Millions of homes and apartments.</p>
+          </div>
+          <div>
+            <h3>List your own property</h3>
+            <p>Sign up and showcase your properties.</p>
+          </div>
+        </div>
+      </section>
+      <footer class="text-center text-lg-start bg-body-dark text-muted">
+        <section
+          class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+        >
+          <div class="me-5 d-none d-lg-block">
+            <span style="color: #fff"
+              >Get connected with us on social networks:</span
+            >
+          </div>
+
+          <div>
+            <a href="" class="me-4 text-reset" style="color: #fff">
+              <i class="fab fa-facebook-f" style="color: #fff"></i>
+            </a>
+            <a href="" class="me-4 text-reset" style="color: #fff">
+              <i class="fab fa-twitter" style="color: #fff"></i>
+            </a>
+            <a href="" class="me-4 text-reset" style="color: #fff">
+              <i class="fab fa-google" style="color: #fff"></i>
+            </a>
+            <a href="" class="me-4 text-reset" style="color: #fff">
+              <i class="fab fa-instagram" style="color: #fff"></i>
+            </a>
+            <a href="" class="me-4 text-reset" style="color: #fff">
+              <i class="fab fa-linkedin" style="color: #fff"></i>
+            </a>
+            <a href="" class="me-4 text-reset" style="color: #fff">
+              <i class="fab fa-github" style="color: #fff"></i>
+            </a>
+          </div>
+        </section>
+
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                  <i class="fas fa-gem me-3" style="color: #fff"></i>Company
+                  name
+                </h6>
+                <p style="color: #fff">
+                  Here you can use rows and columns to organize your footer
+                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.
+                </p>
+              </div>
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                  Products
+                </h6>
+                <p style="color: #fff">
+                  <a href="#!" class="text-reset" style="color: #fff"
+                    >Angular</a
+                  >
+                </p>
+                <p style="color: #fff">
+                  <a href="#!" class="text-reset" style="color: #fff">React</a>
+                </p>
+                <p style="color: #fff">
+                  <a href="#!" class="text-reset" style="color: #fff">Vue</a>
+                </p>
+                <p style="color: #fff">
+                  <a href="#!" class="text-reset" style="color: #fff"
+                    >Laravel</a
+                  >
+                </p>
+              </div>
+
+              <div
+                class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"
+                style="color: #fff"
+              >
+                <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                  Useful links
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset" style="color: #fff"
+                    >Pricing</a
+                  >
+                </p>
+                <p>
+                  <a href="#!" class="text-reset" style="color: #fff"
+                    >Settings</a
+                  >
+                </p>
+                <p>
+                  <a href="#!" class="text-reset" style="color: #fff">Orders</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset" style="color: #fff">Help</a>
+                </p>
+              </div>
+
+              <div
+                class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+                style="color: #fff"
+              >
+                <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                  Contact
+                </h6>
+                <p style="color: #fff">
+                  <i class="fas fa-home me-3" style="color: #fff"></i> New York,
+                  NY 10012, US
+                </p>
+                <p style="color: #fff">
+                  <i class="fas fa-envelope me-3" style="color: #fff"></i>
+                  info@example.com
+                </p>
+                <p style="color: #fff">
+                  <i class="fas fa-phone me-3" style="color: #fff"></i> + 01 234
+                  567 88
+                </p>
+                <p style="color: #fff">
+                  <i class="fas fa-print me-3" style="color: #fff"></i> + 01 234
+                  567 89
+                </p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>
