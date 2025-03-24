@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+       font-family: sans-serif;
+      color: #EEE;
+      box-sizing: border-box;
+  }
+  body{
+      width: 100%;
+      height: 100vh;
+      background-color: #1c1c1c;
+     
+  }
+  section{
+      width: inherit;
+      height: inherit;
+      background-color: #1c1c1c;
+  
+  }
+  header{
+      width: 100%;
+      height: 300px;
+      padding-left: 100px;
+      padding-top: 100px;
+      background-color: #262626;
+      position: relative;
+  
+  }
+  
+  header p{
+  font-size: 10px;
+  color: #eeeeee1f;
+  margin: 10px 0;
+  }
+  header input{
+      margin-top: 95px;
+      width: 80%;
+      height:80px;
+      outline: none;
+      border: none;
+       border-radius: 4px;
+       background-color: #1c1c1c;
+       padding: 10px;
+       border: 7px solid #262626;
+  
+  }
+  header button{
+      background-color: #703BF7;
+      padding: 10px;
+      color: #EEE;
+      border-radius: 4px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 300px;
+      top: 300px;
+  }  
+  .filters{
+      width: 90%;
+      background-color: #262626;
+      height: 200px;
+      margin: auto;
+      margin-top: 20px;
+    
+  }
+  .filters select{
+      width: 200px;
+      margin-top: 40px;
+      padding: 10px;
+      border-radius: 4px;
+   margin-left: 10px;
+   background-color: #1c1c1c;
+   outline: none;
+   border: none;
+  }
+  
+  button{
+      padding: 10px;
+      border-radius: 4px;
+      outline: none;
+       border: none;
+      transition: 0.5s;
+      background-color: #6c3fd7;
+      color: #EEE;
+      cursor: pointer;
+      width: 150px;
+  }
+  button:hover{
+      border: 1px solid #6c3fd7;
+       color: #6c3fd7;
+       background-color: transparent;
+  
+  }
+  
+  .realestates {
+      max-width: 1200px;
+      margin: 10px auto;
+  }
+  h2 {
+      font-size: 38px;
+      margin: 10px 0;
+  }
+  p {
+      font-size: 14px;
+      color: #cccccc85;
+      font-size: smaller;
+  }
+  .listings {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+  }
+  .card {
+      padding: 20px;
+      border-radius: 4px;
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+      background-color: #141414;
+      border: 1px solid #ffffff3a;
+  }
+  .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+  }
+  .details {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+  }
+  .details span {
+      padding: 5px 10px;
+      border-radius: 5px;
+  }
+  .price {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+      display: inline;
+      width: 80px;
+  }
+  .btn {
+      display: inline;
+      background: #6a0dad;
+      color: white;
+      padding: 10px 16px;
+      margin-top: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      width: 200px;
+  } 
+  .footer{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  form {
+      background-color: #1c1c1c;
+      padding: 40px;
+      border-radius: 12px;
+      width: 850px;
+      margin: auto;
+      border: 1px solid #ffffff1f;
+  }
+  
+  .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 25px;
+  }
+  
+  .form-group  div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  label {
+      margin-bottom: 5px;
+      color: #B0B0B0;
+  }
+  
+  input, select, textarea {
+      background-color: #2A2A2A;
+      color: #E0E0E0;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+  }
+  
+  textarea {
+      resize: none;
+      height: 120px;
+  }
+  
+  .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+  }
+  
+  .terms {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  
+  .submit-btn {
+      background-color: #7D00FF;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+      background-color: #9A33FF;
+  }
+  .navbar {
+      background-color: #141414;
+      padding: 10px;
+      
+  
+     
+    }
+    .navbar li a {
+      color: #fff;
+      font-size: smaller;
+      font-family: sans-serif;
+    } 
+    
+    .navbar-brand {
+      color: #eee;
+      font-size: 25px;
+    }
+    .navbar i{
+      background-color: #6a0dad;
+      border-radius: 50%;
+      padding: 10px;
+    }
+    li a:hover{
+  color: #fff;
+   }
+   ul{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+  select{
+      font-size: smaller;
+  }
+  form{
+      width: 90%;
+  
+  }
+  form input,select{
+      padding: 10px;
+      height: 40px;
+      outline: none;
+      border-radius: 4px;
+      border: none;
+  }
+  .navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+    margin-right: 15px;
+    transition: 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #6c3fd7 !important;
+  }
+  .filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .filters button{
+    margin-top: 35px;
+    margin-left: 10px;
+  }
+  a{color: #eee;}
+
+  </style>
+    <title>Properties</title>
+</head>
+<body>
+    
+    <section>
+        <nav class="navbar navbar-expand-lg bg-body-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Propify</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./home.html"
+                    >Home</a
+                  >                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about us.html">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Browse_poperties.html">Properties</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="./services.html">Services</a>
+                  </li>
+                  <a href="./profile.html"><i class="fa-solid fa-user"></i></a>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <header>
+
+            <h1 id="animated-text"></h1>
+            <p>Welcome to Estatein, where your dream property awaits in every corner of our beautiful world. Explore our curated selection of properties, each offering a unique story and a chance to redefine your life. With categories to suit every dreamer, your journey </p>
+            <input type="text" name="" id=""placeholder="Search For A Property  witlocation/ ID">
+            <button>Find Property <i class="fa-solid fa-magnifying-glass"></i></button>
+        </header>
+        <div class="filters">
+            <select name="" id="">
+                <option value="" selected disabled>City</option>
+                <option value="">opt2</option>
+                 <option value="">opt3</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected disabled>Residential neighborhood</option>
+                <option value="">opt2</option>
+                <option value="">opt3</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected disabled>Property Type</option>
+                <option value="">opt2</option>
+                <option value="">opt3</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected disabled>Pricing Range</option>
+                <option value="">opt2</option>
+                <option value="">opt3</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected disabled>Build Year Range</option>
+                <option value="">opt2</option>
+                <option value="">opt3</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected disabled>Land Type</option>
+                <option value="">opt2</option>
+                <option value="">opt3</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected disabled>Property Size Range</option>
+                <option value="">opt2</option>
+                <option value="">opt3</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected disabled>Dealerd</option>
+                <option value="">opt2</option>
+                <option value="">opt3</option>
+            </select>
+              <select name="" id="">
+                <option value="" selected disabled>Compounded</option>
+                <option value="">opt2</option>
+                <option value="">opt3</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected disabled>Floor</option>
+                <option value="">opt2</option>
+                <option value="">opt3</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected disabled>Buy</option>
+                <option value="">Rent</option>
+            </select>
+            <button id="fil">Filter</button>
+        </div>
+        <div class="realestates">
+            <h2>Discover a World of Possibilities</h2>
+            <p>
+                Our portfolio of properties is as diverse as your dreams. Explore the following categories to find the perfect property that resonates with your vision of home
+            </p>
+            <div class="listings">
+              <div class="card">
+                <img src="../images//logo.PNG" alt="Seaside Serenity Villa" />
+                <h3>Seaside Serenity Villa</h3>
+                <p>
+                  A stunning 4-bedroom, 3-bathroom villa in a peaceful neighborhood.
+                </p>
+                <div class="details">
+                  <span>4 <i class="fa-solid fa-bed"></i></span>
+                  <span>3 <i class="fa-solid fa-toilet"></i></span>
+                  <span>Villa</span>
+                </div>
+                <div class="footer">
+                  <div class="price">$550,000</div>
+                  <a href="#" class="btn">View Property Details</a>
+                 </div>
+              </div>
+              <div class="card">
+                <img
+                  src="../images//Real-estate-website-design.jpg"
+                  alt="Metropolitan Haven"
+                />
+                <h3>Metropolitan Haven</h3>
+                <p>A chic and fully-furnished 2-bedroom apartment with city views.</p>
+                <div class="details">
+                  <span>2 <i class="fa-solid fa-bed"></i></span>
+                  <span>2 <i class="fa-solid fa-toilet"></i></span>
+                  <span>Apartment</span>
+                </div>
+               <div class="footer">
+                <div class="price">$550,000</div>
+                <a href="#" class="btn">View Property Details</a>
+               </div>
+              </div>
+              <div class="card">
+                <img src="../images//real-stste.jpg " alt="Rustic Retreat Cottage" />
+                <h3>Rustic Retreat Cottage</h3>
+                <p>
+                  An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.
+                </p>
+                <div class="details">
+                  <span>3 <i class="fa-solid fa-bed"></i></span>
+                  <span>3 <i class="fa-solid fa-toilet"></i></span>
+                  <span>Townhouse</span>
+                </div>
+                <div class="footer">
+                  <div class="price">$550,000</div>
+                  <a href="#" class="btn">View Property Details</a>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <form>
+            <h2>Let's Make it Happen</h2>
+            <p>Ready to take the first step toward your dream property? Fill out the form below, and our real estate wizards will work their magic to find your perfect match. Don't wait; let's embark on this exciting journey together.</p>
+            <div class="form-group">
+                <div>
+                    <input type="text" placeholder="Enter First Name">
+                </div>
+                <div>
+                    <input type="text" placeholder="Enter Last Name">
+                </div>
+                <div>
+                    <input type="email" placeholder="Enter your Email">
+                </div>
+               
+            </div>
+    
+            <div class="form-group">
+                <div>
+                    <select>
+                        <option>Select Location</option>
+                    </select>
+                </div>
+                <div>
+                    <select>
+                        <option>Select Property Type</option>
+                    </select>
+                </div>
+                <div>
+                    <select>
+                        <option>Select no. of Bathrooms</option>
+                    </select>
+                </div>
+                <div>
+                    <select>
+                        <option>Select no. of Bedrooms</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div>
+                    <select>
+                        <option>Select Budget</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="tel" placeholder="Enter Phone Number">
+                </div>
+                <div>
+                    <input type="tel" placeholder="Enter Phone Number">
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div>
+                    <textarea placeholder="Enter your Message here..."></textarea>
+                </div>
+            </div>
+    
+            <div class="terms">
+                <input type="checkbox">
+                <label>I agree with Terms of Use and Privacy Policy</label>
+            </div>
+    
+            <button class="submit-btn">Send Your Message</button>
+        </form>
+        <footer class="text-center text-lg-start bg-body-dark text-muted">
+          <section
+            class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+          >
+            <div class="me-5 d-none d-lg-block">
+              <span style="color: #fff"
+                >Get connected with us on social networks:</span
+              >
+            </div>
+    
+            <div>
+              <a href="" class="me-4 text-reset" style="color: #fff">
+                <i class="fab fa-facebook-f" style="color: #fff"></i>
+              </a>
+              <a href="" class="me-4 text-reset" style="color: #fff">
+                <i class="fab fa-twitter" style="color: #fff"></i>
+              </a>
+              <a href="" class="me-4 text-reset" style="color: #fff">
+                <i class="fab fa-google" style="color: #fff"></i>
+              </a>
+              <a href="" class="me-4 text-reset" style="color: #fff">
+                <i class="fab fa-instagram" style="color: #fff"></i>
+              </a>
+              <a href="" class="me-4 text-reset" style="color: #fff">
+                <i class="fab fa-linkedin" style="color: #fff"></i>
+              </a>
+              <a href="" class="me-4 text-reset" style="color: #fff">
+                <i class="fab fa-github" style="color: #fff"></i>
+              </a>
+            </div>
+          </section>
+    
+          <section class="">
+            <div class="container text-center text-md-start mt-5">
+              <!-- Grid row -->
+              <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <!-- Content -->
+                  <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                    <i class="fas fa-gem me-3" style="color: #fff"></i>Company name
+                  </h6>
+                  <p style="color: #fff">
+                    Here you can use rows and columns to organize your footer
+                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit.
+                  </p>
+                </div>
+    
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <!-- Links -->
+                  <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                    Products
+                  </h6>
+                  <p style="color: #fff">
+                    <a href="#!" class="text-reset" style="color: #fff">Angular</a>
+                  </p>
+                  <p style="color: #fff">
+                    <a href="#!" class="text-reset" style="color: #fff">React</a>
+                  </p>
+                  <p style="color: #fff">
+                    <a href="#!" class="text-reset" style="color: #fff">Vue</a>
+                  </p>
+                  <p style="color: #fff">
+                    <a href="#!" class="text-reset" style="color: #fff">Laravel</a>
+                  </p>
+                </div>
+    
+                <div
+                  class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"
+                  style="color: #fff"
+                >
+                  <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                    Useful links
+                  </h6>
+                  <p>
+                    <a href="#!" class="text-reset" style="color: #fff">Pricing</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset" style="color: #fff">Settings</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset" style="color: #fff">Orders</a>
+                  </p>
+                  <p>
+                    <a href="#!" class="text-reset" style="color: #fff">Help</a>
+                  </p>
+                </div>
+    
+                <div
+                  class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+                  style="color: #fff"
+                >
+                  <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                    Contact
+                  </h6>
+                  <p style="color: #fff">
+                    <i class="fas fa-home me-3" style="color: #fff"></i> New York,
+                    NY 10012, US
+                  </p>
+                  <p style="color: #fff">
+                    <i class="fas fa-envelope me-3" style="color: #fff"></i>
+                    info@example.com
+                  </p>
+                  <p style="color: #fff">
+                    <i class="fas fa-phone me-3" style="color: #fff"></i> + 01 234
+                    567 88
+                  </p>
+                  <p style="color: #fff">
+                    <i class="fas fa-print me-3" style="color: #fff"></i> + 01 234
+                    567 89
+                  </p>
+                </div>
+                <!-- Grid column -->
+              </div>
+              <!-- Grid row -->
+            </div>
+          </section>
+        </footer>
+    </section>
+    
+    <script>
+
+        const txt='Find Your Dream Property';
+        let  index=0;
+        function automated_text(){
+          if(index<txt.length){
+            document.getElementById('animated-text').innerText+=txt[index];
+            index++;
+            setTimeout(automated_text,100)
+  
+          }
+        }
+        automated_text();
+  
+        
+      </script>
+</body>
+</html>

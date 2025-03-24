@@ -1,0 +1,637 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #fff;
+    }
+    body {
+        background-color: #0f0f0f;
+        font-family: Arial, sans-serif;
+       
+    }
+    
+    .container {
+        max-width: 1200px;
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
+    
+    .card, .section {
+        background-color: #1A1A1A;
+        border-radius: 4px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #2A2A2A;
+    
+    }
+    
+    .contact-icons{
+        width: fit-content;
+        padding: 10px;
+        background-color: #1A1A1A;
+        margin: 20px  auto;
+        border: 1px solid #2A2A2A;
+        border-radius: 4px;
+    
+    }
+    
+    h1, h2 {
+        color: #E0E0E0;
+        margin-bottom: 10px;
+    }
+    
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 24px;
+    }
+    
+    .button, .btn {
+        background-color: #6b46c1;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .button:hover, .btn:hover {
+        background-color: #805ad5;
+    }
+    
+    .thumbnail-bar {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .thumbnail-bar img {
+        height: 80px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    
+    .thumbnail-bar img:hover {
+        transform: scale(1.05);
+    }
+    
+    .main-gallery {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main-gallery img {
+        height: 300px;
+        width: 400px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    
+    .arrows {
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        margin: 0 10px;
+    }
+    
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .contact-icons i {
+        font-size: 30px;
+        padding: 10px;
+        border-radius: 50%;
+        color: #7A49FF;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-icons i:hover {
+        background-color: #5D3DB5;
+    }
+    
+    .note, .input-box {
+        background-color: #2A2A2A;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+        color: #AAAAAA;
+        border: 1px solid #444;
+        flex-grow: 1;
+    }
+    .views{
+        background-color: #1A1A1A;
+        border-radius: 4px;
+        padding: 20px;
+        border: 1px solid #2A2A2A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .views button{
+        background-color: #5D3DB5;
+        width: 50%;
+        border-radius: 2px;
+    }
+    .Monthly-expensee h2{
+        display: block;
+        width: 90%;
+        height: 80px;
+        /* background-color: red; */
+        margin: auto;
+        border:none;
+       display: flex;
+       justify-content: left;
+       align-items: center;
+        border-bottom: 1px solid #2A2A2A;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+    .Monthly-expensee {
+        border: 1px solid #2A2A2A;
+        margin: 20px auto;
+    
+    }
+    .Monthly-expensee div{
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        border-bottom: 1px solid #2A2A2A;
+        margin: auto;
+        width: 80%;
+    
+    }
+    .Monthly-expensee div p{
+        color: #ffffff2e;
+        font-size: smaller;
+    }
+    .container1 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        padding: 40px;
+    }
+    .card {
+        background-color: #1A1A1A;
+        border-radius: 2px;
+        padding: 20px;
+    }
+    .card input {
+        width: 80%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #333;
+        color: #eee;
+        border: none;
+        outline: none;
+        margin: 20px;
+        background-color: #e0e0e047;
+    }
+    .button {
+        margin-top: 20px;
+        background-color: #6d28d9;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: #7c3aed;
+    }
+    h2 {
+        margin-top: 0;
+    }
+    footer{
+        margin-top: 100px;
+      }
+      .navbar {
+        background-color: #141414;
+        padding: 10px;
+        width: 100%;
+      
+       
+      }
+      .cards div:hover{
+        transform: translateY(-5px);
+        box-shadow: 10px 10px 2px #ffffff6b;
+      }
+      .navbar li a {
+        color: #fff;
+        font-size: smaller;
+        font-family: sans-serif;
+      } 
+      
+      .navbar-brand {
+        color: #eee;
+        font-size: 25px;
+      }
+      .navbar i{
+        background-color: #6a0dad;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      li a:hover{
+      color: #fff;
+      }
+      .navbar-nav .nav-link {
+        color: #e0e0e0 !important;
+        margin-right: 15px;
+        transition: 0.3s;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: #6c3fd7 !important;
+      }
+      
+      ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header h1{
+        font-weight: lighter;
+        font-size: 20px;
+      }
+      #rep{
+        display: block;
+        margin: auto;
+      }
+      a{color: #eee;}
+
+    </style>
+    <title>Real Estate Gallery</title>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Propify</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                class="nav-link active"
+                aria-current="page"
+                href="./home.html"
+                >Home</a
+              >              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about us.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Browse_poperties.html">Properties</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./services.html">Services</a>
+              </li>
+              <a href="./profile.html"><i class="fa-solid fa-user"></i></a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container1">
+        <div class="header">
+            <div>
+                <h1>Seaside Serenity Villa 1656251 <span>• Kailua, California</span></h1>
+            </div>
+            <div>
+                <h2>$1,250,000</h2>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="thumbnail-bar">
+                <img src=".//images//images (1).jpg" alt="thumb1" class="images">
+                <img src=".//images/images (2).jpg" alt="thumb2" class="images">
+                <img src="./images//images.jpg" alt="thumb3" class="images">
+                <img src="./images/logo.PNG" alt="thumb4" class="images">
+                <img src="./images//Real-estate-website-design.jpg" alt="thumb5" class="images">
+            </div>
+            
+            <div class="main-gallery">
+                <img src="./images/images (1).jpg" alt="Main Image 1" id="main-image">
+            </div>
+        </div>
+    </div>
+
+        <div class="container">
+            <!-- Left Section -->
+            <div>
+                <div class="card">
+                    <h2>Property Details</h2>
+                    <p>Type: Form Land Sale</p>
+                    <p>Plot Area: 2 Acre</p>
+                    <p>Listed by: Agent</p>
+                    <p>Length: 200 ft</p>
+                    <p>Width: 200 ft</p>
+                    <p>Frontage And Access: ...</p>
+                    <p>Zoning Or Usage: ...</p>
+                </div>
+    
+             
+    
+               
+            </div>
+    
+            <!-- Right Section -->
+            <div>
+                <div class="card">
+                    <h2>About Details</h2>
+                    <p>Name: Serenity Villa</p>
+                    <p>Type: Residential & Commercial Property</p>
+                    <p>Location: 812/288, Park Avenue Road, Chicago, IL</p>
+                    <p>Contact: sample@example.com</p>
+                    <p>Rera Score: Not Available</p>
+                </div>
+            </div>
+        </div>
+    
+        <div style="padding: 0 40px;">
+            <h1>Comprehensive Pricing Details</h1>
+            <p>At Estateix, transparency is key. We want you to have a clear understanding of all costs associated with your property investment. Below, we break down the pricing for Seaside Serenity Villa to help you make an informed decision.</p>
+        </div>
+   
+    
+    <div class="container">
+        
+        <div class="Monthly-expensee">
+            <h2>Monthly Expenses</h2>
+            <div class="first">
+                <p>Property Taxes </p> <br> <span>$1,250</span>
+                <p>Homeowner Association Fee  </p> <br><span>$300</span>
+            </div>
+            <div class="second">
+                <p>Mortgage Payment Varies based on terms and interest rate</p>
+                <p>Property Insurance  (Approximate monthly cost)</p> <br><span> $300</span>
+            </div>
+            
+           
+        </div>
+
+        <div class="Monthly-expensee">
+            <h2>Monthly Expenses</h2>
+            <div class="first">
+                <p>Property Taxes </p> <br> <span>$1,250</span>
+                <p>Homeowner Association Fee  </p> <br><span>$300</span>
+            </div>
+            <div class="second">
+                <p>Mortgage Payment Varies based on terms and interest rate</p>
+                <p>Property Insurance  (Approximate monthly cost)</p> <br><span> $300</span>
+            </div>
+            
+           
+        </div>
+
+        <div class="Monthly-expensee">
+            <h2>Monthly Expenses</h2>
+            <div class="first">
+                <p>Property Taxes </p> <br> <span>$1,250</span>
+                <p>Homeowner Association Fee  </p> <br><span>$300</span>
+            </div>
+            <div class="second">
+                <p>Mortgage Payment Varies based on terms and interest rate</p>
+                <p>Property Insurance  (Approximate monthly cost)</p> <br><span> $300</span>
+            </div>
+            
+           
+        </div>
+
+        <div class="Monthly-expensee">
+            <h2>Monthly Expenses</h2>
+            <div class="first">
+                <p>Property Taxes </p> <br> <span>$1,250</span>
+                <p>Homeowner Association Fee  </p> <br><span>$300</span>
+            </div>
+            <div class="second">
+                <p>Mortgage Payment Varies based on terms and interest rate</p>
+                <p>Property Insurance  (Approximate monthly cost)</p> <br><span> $300</span>
+            </div>
+            
+           
+        </div>
+
+
+  
+    <div class="container">
+      
+        <div class="Monthly-expensee">
+            <h2>Monthly Expenses</h2>
+            <div class="first">
+                <p>Property Taxes </p> <br> <span>$1,250</span>
+                <p>Homeowner Association Fee  </p> <br><span>$300</span>
+            </div>
+            <div class="second">
+                <p>Mortgage Payment Varies based on terms and interest rate</p>
+                <p>Property Insurance  (Approximate monthly cost)</p> <br><span> $300</span>
+            </div>
+            
+           
+        </div>
+
+
+        <div class="Monthly-expensee">
+            <h2>Monthly Expenses</h2>
+            <div class="first">
+                <p>Property Taxes </p> <br> <span>$1,250</span>
+                <p>Homeowner Association Fee  </p> <br><span>$300</span>
+            </div>
+            <div class="second">
+                <p>Mortgage Payment Varies based on terms and interest rate</p>
+                <p>Property Insurance  (Approximate monthly cost)</p> <br><span> $300</span>
+            </div>
+            
+           
+        </div>
+
+      
+
+        <div class="views">
+            <button class="button">3D View</button>
+            <button class="button">VR Version</button>
+        </div>
+        <div class="contact">
+            <h2 class="section-title">Contact Seller</h2>
+
+            <div class="contact-icons">
+                <i class="fas fa-phone"></i>
+                <i class="fas fa-envelope"></i>
+                <i class="fas fa-comment"></i>
+            </div>
+        </div>
+        <div>
+            <button class="button" id="rep">Make a report</button>
+        </div>
+    </div>
+    <footer class="text-center text-lg-start bg-body-dark text-muted">
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span style="color: #fff"
+            >Get connected with us on social networks:</span
+          >
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-facebook-f" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-twitter" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-google" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-instagram" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-linkedin" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-github" style="color: #fff"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                <i class="fas fa-gem me-3" style="color: #fff"></i>Company name
+              </h6>
+              <p style="color: #fff">
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Products
+              </h6>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Angular</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">React</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Vue</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Laravel</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Help</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Contact
+              </h6>
+              <p style="color: #fff">
+                <i class="fas fa-home me-3" style="color: #fff"></i> New York,
+                NY 10012, US
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-envelope me-3" style="color: #fff"></i>
+                info@example.com
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-phone me-3" style="color: #fff"></i> + 01 234
+                567 88
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-print me-3" style="color: #fff"></i> + 01 234
+                567 89
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+    </footer>
+<script>
+    let images= document.querySelectorAll('.images');
+    for(let i=0;i<images.length;i++){
+        images[i].onclick=()=>{
+            document.getElementById('main-image').src=images[i].src;
+
+        }
+    }
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: #1c1c1c;
+      }
+      header {
+        width: 100%;
+        padding-left: 80px;
+        padding-top: 80px;
+        padding-bottom: 20px;
+      }
+      button {
+        padding: 10px;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        transition: 0.5s;
+        background-color: #6c3fd7;
+        color: #eee;
+        cursor: pointer;
+        width: 200px;
+        border: 1px solid #6c3fd7;
+        display: block;
+      }
+      button:hover {
+        border: 1px solid #6c3fd7;
+        color: #fff;
+        background-color: transparent;
+        transform: translateY(-5px);
+      }
+      .services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      h1,
+      p {
+        color: #eee;
+        margin: 20px 0;
+      }
+      p {
+        font-size: smaller;
+        color: #eeeeee38;
+      }
+      /* From Uiverse.io by ahmed150up */
+      .card {
+        width: 260px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .chat-header {
+        background-color: #6c3fd7;
+        color: #fff;
+        padding: 10px;
+        font-size: 18px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .chat-window {
+        height: 220px;
+        overflow-y: scroll;
+      }
+
+      .message-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .chat-input {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+      }
+
+      .message-input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 5px;
+        font-size: 14px;
+      }
+
+      .send-button {
+        border: none;
+        outline: none;
+        background-color: #6c3fd7;
+        color: #fff;
+        font-size: 14px;
+        padding: 5px 10px;
+        cursor: pointer;
+        border: 1px solid #6c3fd7;
+      }
+
+      .send-button:hover {
+        background-color: transparent;
+        color: #6c3fd7;
+        border: 1px solid #6c3fd7;
+      }
+      .card {
+        width: 80%;
+        margin: 40px auto;
+      }
+      .navbar {
+        background-color: #141414;
+        padding: 10px;
+      }
+      .navbar li a {
+        color: #fff;
+        font-size: smaller;
+        font-family: sans-serif;
+      }
+
+      .navbar-brand {
+        color: #eee;
+        font-size: 25px;
+      }
+      .navbar i {
+        background-color: #6a0dad;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      li a:hover {
+        color: #fff;
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+
+        height: auto;
+        width: 100%;
+      }
+
+      .property-card {
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .property-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .header-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header-info h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .header-info p {
+        margin: 0;
+        color: gray;
+        font-size: 14px;
+      }
+
+      .property-info {
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .property-info span {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .description {
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 15px;
+      }
+
+      .contact-btn {
+        padding: 10px 20px;
+        background-color: #a3b7df;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      }
+
+      .contact-btn:hover {
+        background-color: #6b91d4;
+      }
+      section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+      }
+      section .agents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .be-agent {
+        width: 40%;
+      }
+      .be-agent button {
+        padding: 10px;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        transition: 0.5s;
+        background-color: #6c3fd7;
+        color: #eee;
+        cursor: pointer;
+        width: 150px;
+        border: 1px solid #6c3fd7;
+        display: block;
+        margin: auto;
+      }
+      button:hover {
+        border: 1px solid #6c3fd7;
+        color: #6c3fd7;
+        background-color: transparent;
+      }
+      .title {
+        width: 100%;
+        display: block;
+        height: 300px;
+        color: #fff;
+        background-color: #eeeeee0b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        margin-bottom: 100px;
+      }
+     
+      .navbar li a {
+        color: #fff;
+        font-size: smaller;
+        font-family: sans-serif;
+      }
+
+      .navbar-brand {
+        color: #eee;
+        font-size: 25px;
+        background-colwidth: 100%;
+      }
+      .navbar i {
+        background-color: #6a0dad;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      li a:hover {
+        color: #fff;
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+      }
+      button a {
+        text-decoration: none;
+      }
+      button a:hover {
+        color: #eee;
+      }
+      .navbar-nav .nav-link {
+        color: #e0e0e0 !important;
+        margin-right: 15px;
+        transition: 0.3s;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: #6c3fd7 !important;
+      }
+      a{
+        color: #fff;
+      }
+      a{color: #eee;}
+
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Propify</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./home.html"
+                  >Home</a
+                >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about us.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Browse_poperties.html">Properties</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./services.html">Services</a>
+            </li>
+            <a href="./profile.html"><i class="fa-solid fa-user"></i></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <button>Contact Us</button>
+      <h1>Elevate Your Real Estate Experience</h1>
+      <p>
+        Welcome to Estatein, where your real estate aspirations meet expert
+        guidance. Explore our comprehensive range of services, each designed to
+        cater to your unique needs and dreams.
+      </p>
+    </header>
+    <div class="services">
+      <button><a href="sell_property.html">Sell Property</a></button>
+      <button><a href="Be_agent.html">Become a Dealer</a></button>
+      <button><a href="view_agents.html">Our Dealers</a></button>
+      <button><a href="Browse_poperties.html">Browse Properties</a></button>
+      
+      
+    </div>
+    <div class="ai-bot">
+      <!-- From Uiverse.io by ahmed150up -->
+      <div class="card">
+        <div class="chat-header">Ai Chat</div>
+        <div class="chat-window">
+          <ul class="message-list"></ul>
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            class="message-input"
+            placeholder="Type your message here"
+          />
+          <button class="send-button">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center text-lg-start bg-body-dark text-muted">
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span style="color: #fff"
+            >Get connected with us on social networks:</span
+          >
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-facebook-f" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-twitter" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-google" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-instagram" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-linkedin" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-github" style="color: #fff"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                <i class="fas fa-gem me-3" style="color: #fff"></i>Company name
+              </h6>
+              <p style="color: #fff">
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Products
+              </h6>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Angular</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">React</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Vue</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Laravel</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Help</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Contact
+              </h6>
+              <p style="color: #fff">
+                <i class="fas fa-home me-3" style="color: #fff"></i> New York,
+                NY 10012, US
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-envelope me-3" style="color: #fff"></i>
+                info@example.com
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-phone me-3" style="color: #fff"></i> + 01 234
+                567 88
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-print me-3" style="color: #fff"></i> + 01 234
+                567 89
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

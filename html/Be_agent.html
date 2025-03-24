@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+
+        box-sizing: border-box;
+      }
+      .navbar-nav .nav-link {
+        color: #e0e0e0 !important;
+        margin-right: 15px;
+        transition: 0.3s;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: #6c3fd7 !important;
+      }
+      
+      body {
+        width: 100%;
+        height: 100vh;
+        background-color: #141414;
+      }
+      form {
+        width: 500px;
+        height: 550px;
+        margin-top: 50px;
+        margin: auto;
+      }
+      form input {
+        width: 80%;
+        padding: 10px;
+        border-radius: 4px;
+        display: block;
+        outline: none;
+        border: none;
+        margin: 10px auto;
+      }
+
+      textarea {
+        width: 80%;
+        height: 200px;
+        margin: auto;
+        display: block;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+      }
+      select {
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+      }
+      button {
+        width: 100px;
+        padding: 10px;
+        background-color: #703bf7;
+        margin: 10px auto;
+        display: block;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        cursor: pointer;
+      }
+      .report {
+        width: 80%;
+        height: 70px;
+        background-color: #fff;
+        margin-top: 40px;
+        border-radius: 0 8px 8px 0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+      .report h2 {
+        font-weight: lighter;
+      }
+      i {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: lighter;
+        margin-top: 2px;
+      }
+      label {
+        width: 80%;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+      input[type="checkbox"] {
+        display: inline;
+      }
+      .navbar {
+        background-color: #141414;
+        padding: 10px;
+      }
+      .navbar li a {
+        color: #fff;
+        font-size: smaller;
+        font-family: sans-serif;
+      }
+
+      .navbar-brand {
+        color: #eee;
+        font-size: 25px;
+      }
+      .navbar i {
+        background-color: #6a0dad;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      li a:hover {
+        color: #fff;
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      a,
+      footer i {
+        color: #eee;
+      }
+      #submit {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      footer {
+        margin-top: 100px;
+      }
+      .navbar {
+        background-color: #141414;
+        padding: 10px;
+      }
+      .navbar li a {
+        color: #fff;
+        font-size: smaller;
+        font-family: sans-serif;
+      }
+
+      .navbar-brand {
+        color: #eee;
+        font-size: 25px;
+      }
+      .navbar i {
+        background-color: #6a0dad;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      li a:hover {
+        color: #fff;
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      a{color: #eee;}
+
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <nav class="navbar navbar-expand-lg bg-body-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Propify</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../about us.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../poperties.html">Properties</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../services.html">Services</a>
+              </li>
+              <a href="./profile.html"><i class="fa-solid fa-user"></i></a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="report">
+        <h2>Agent Verification</h2>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+      <form>
+        <input
+          class="form-control"
+          type="text"
+          name="name"
+          placeholder="First name"
+          required
+        />
+        <input
+          class="form-control"
+          type="number"
+          name="name"
+          placeholder="Last namer"
+          required
+        />
+        <input
+          class="form-control"
+          type="number"
+          name="name"
+          placeholder="email id"
+          required
+        />
+
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          placeholder="Static  Adress "
+          required
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="name"
+          placeholder="upload personal id"
+          required
+        />
+        <input
+          class="form-control"
+          type="number"
+          name="name"
+          placeholder="Currently Job"
+          required
+        />
+        <input
+          class="form-control"
+          type="number"
+          name="name"
+          placeholder="mobile number"
+          required
+        />
+
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          placeholder="Company you belong to "
+          required
+        />
+
+        <label for="" class="adds"
+          ><input type="checkbox" name="" id="" /> i have read and agree to
+          the</label
+        >
+
+        <button id="submit" type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </section>
+    <footer class="text-center text-lg-start bg-body-dark text-muted">
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span style="color: #fff"
+            >Get connected with us on social networks:</span
+          >
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-facebook-f" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-twitter" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-google" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-instagram" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-linkedin" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-github" style="color: #fff"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                <i class="fas fa-gem me-3" style="color: #fff"></i>Company name
+              </h6>
+              <p style="color: #fff">
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Products
+              </h6>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Angular</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">React</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Vue</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Laravel</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Help</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Contact
+              </h6>
+              <p style="color: #fff">
+                <i class="fas fa-home me-3" style="color: #fff"></i> New York,
+                NY 10012, US
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-envelope me-3" style="color: #fff"></i>
+                info@example.com
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-phone me-3" style="color: #fff"></i> + 01 234
+                567 88
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-print me-3" style="color: #fff"></i> + 01 234
+                567 89
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+    </footer>
+    <script>
+      document.querySelector("form").style.display = "none";
+
+      document.querySelector(".report").onclick = () => {
+        if (document.querySelector("form").style.display == "block")
+          document.querySelector("form").style.display = "none";
+        else document.querySelector("form").style.display = "block";
+      };
+    </script>
+  </body>
+</html>

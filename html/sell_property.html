@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Pricing Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        padding: 40px;
+        width: 100%;
+    }
+    
+    .card {
+        background-color: #222;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    input, select {
+        width: 90%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #222;
+        border: 1px solid #ffffff1f;
+        color: white;
+        outline: none;
+    
+    }
+    
+    .button {
+        margin-top: 20px;
+        background-color: #6d28d9;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .button:hover {
+        background-color: #7c3aed;
+    }
+    
+    h2 {
+        margin-top: 0;
+    }
+    
+    .footer-section {
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    .footer-section textarea {
+        width: 50%;
+        height: 100px;
+        background-color: #222;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+    }
+    
+    .footer-buttons {
+        margin-top: 10px;
+    }
+    
+    .footer-buttons button {
+        background-color: #6d28d9;
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+    
+    .footer-buttons button:hover {
+        background-color: #7c3aed;
+    }
+    
+    .footer-section a {
+        color: #6d28d9;
+        margin-left: 20px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .form-container{
+        width: 100%;
+        margin: auto;
+    }
+    .footer-section textarea{
+        width:600px;
+        height: 400px;
+    
+    }
+    .form-group{
+        width: 100%;
+     
+    }
+    .form-group input,.form-group select{
+        width: 100%;
+        border-radius: 2px;
+    }
+    footer{
+        margin-top: 100px;
+      }
+      .navbar {
+        background-color: #141414;
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        border: none;
+       
+      }
+      .cards div:hover{
+        transform: translateY(-5px);
+        box-shadow: 10px 10px 2px #ffffff6b;
+      }
+      .navbar li a {
+        color: #fff;
+        font-size: smaller;
+        font-family: sans-serif;
+      } 
+      
+      .navbar-brand {
+        color: #eee;
+        font-size: 25px;
+      }
+      .navbar i{
+        background-color: #6a0dad;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      li a:hover{
+      color: #fff;
+      }
+      ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navbar-nav .nav-link {
+        color: #e0e0e0 !important;
+        margin-right: 15px;
+        transition: 0.3s;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: #6c3fd7 !important;
+      }
+      
+      input[type="file"]{
+        display: block;
+        cursor: pointer;
+        
+      }
+      #upload{
+        margin: 20px 0;
+      }
+      a{color: #eee;}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <nav class="navbar navbar-expand-lg bg-body-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Propify</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./home.html"
+                  >Home</a
+                >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about us.html">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Browse_poperties.html">Properties</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./services.html">Services</a>
+                </li>
+                <a href="./profile.html"><i class="fa-solid fa-user"></i></a>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="card">
+          <h2>Owner Info</h2>
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Email ID" />
+          <input type="file" />
+          <input type="text" placeholder="Mobile Number" />
+          <input type="text" placeholder="Choose your location" />
+        
+        </div>
+        <div class="form-container">
+          <div class="form-group">
+            <select name="" id="">
+              <option selected disabled>Sale Typ</option>
+              <option>Select</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="" id="">
+              <option selected disabled>Area</option>
+              <option>Select</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select name="" id="">
+              <option selected disabled>Number of Floors</option>
+              <option>Select</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Total Price" />
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Possession By" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h2>Property Location & Details</h2>
+          <input type="text" placeholder="Enter property location" />
+          <input type="text" placeholder="Name of project/society" />
+          <select>
+            <option>Select state</option>
+          </select>
+          <input type="text" placeholder="Name of project/society" />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <textarea placeholder="Tell us more about the property"></textarea>
+      <div class="footer-buttons">
+        <button id="upload"><input type="file" name="" id="">Upload photos</button><br>
+        <button>Confirm</button>
+      </div>
+    </div>
+    <footer class="text-center text-lg-start bg-body-dark text-muted">
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span style="color: #fff"
+            >Get connected with us on social networks:</span
+          >
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-facebook-f" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-twitter" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-google" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-instagram" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-linkedin" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-github" style="color: #fff"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                <i class="fas fa-gem me-3" style="color: #fff"></i>Company name
+              </h6>
+              <p style="color: #fff">
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Products
+              </h6>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Angular</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">React</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Vue</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Laravel</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Help</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Contact
+              </h6>
+              <p style="color: #fff">
+                <i class="fas fa-home me-3" style="color: #fff"></i> New York,
+                NY 10012, US
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-envelope me-3" style="color: #fff"></i>
+                info@example.com
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-phone me-3" style="color: #fff"></i> + 01 234
+                567 88
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-print me-3" style="color: #fff"></i> + 01 234
+                567 89
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

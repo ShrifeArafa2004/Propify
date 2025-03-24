@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/home.css" />
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+         font-family: sans-serif;
+        color: #EEE;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: #141414;
+       
+    }
+    header{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 60px;
+        background-color: #eeeeee08;
+        position: relative;
+    
+    }
+    header button{
+         padding: 10px;
+         border-radius: 4px;
+         outline: none;
+        
+         transition: 0.5s;
+         background-color: #6c3fd7;
+         color: #EEE;
+    }
+    header button:hover{
+        border: 1px solid #6c3fd7;
+         color: #6c3fd7;
+         background-color: transparent;
+    
+    }
+    header div{
+        width: 100%;
+        padding-left: 10px;
+    }
+    
+    header .left p{
+        width: 80%;
+        font-size: 10px;
+        margin: 30px 0;
+        color: #eeeeee50;
+    
+    }
+    header .left h2{
+        margin-top: 10px;
+    }
+    header .left button{
+        margin: 10px 0;
+    }
+    
+    .numbers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .numbers div{
+        background-color: #eeeeee20;
+        width: 50%;
+        border-radius: 10px;
+        
+    }
+    header .right{
+        background-image: url('../images/Real-estate-website-design.jpg');
+        width: 80%;
+        height: inherit;
+        margin: 10px;
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 54%;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 10px solid #6d3fd769;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: wave 2s  linear infinite;
+    
+    }
+    .circle p{
+        color: #6c3fd7;
+        font-weight: 900;
+    }
+    @keyframes wave {
+        from{
+          transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+    
+        }
+    }
+    
+    
+    .container {
+        display: flex;
+      
+        width: 80%;
+        background-color: #1a1a1a;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        margin: 20px auto;
+    }
+    .container .left-panel {
+        width: 40%;
+        background: #6c3fd7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 600px;
+    }
+    .left-panel::before{
+        content: "Share your opinion with us.";
+        position: absolute;
+        background-color:#262626;
+        width: 300px;
+        height: 400px;
+        top: 0px;
+        left:0px;
+       font-size: 30px;
+       padding: 10px;
+       font-family: sans-serif;
+    }
+    .container .overlay-box {
+        color: white;
+        text-align: left;
+        width: 70%;
+    }
+    
+    .container .right-panel {
+        width: 60%;
+        padding: 40px;
+        color: white;
+    }
+    .container .form-group {
+        margin-bottom: 15px;
+    }
+    .container .inline {
+        display: flex;
+        justify-content: space-between;
+    }
+    .container .inline div {
+        width: 48%;
+    }
+    
+    .container input, textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #333;
+        color: white;
+    }
+    .container textarea {
+        height: 80px;
+        resize: none;
+    }
+    .container .stars {
+        margin: 15px 0;
+        font-size: 20px;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .stars span{
+        cursor: pointer;
+        color: gold;
+    
+    }
+    .container button {
+        width: 200px;
+        padding: 10px;
+        background: #6c3fd7;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        margin: auto;
+        display: block;
+        cursor: pointer;
+    }
+    button{
+        transition: 0.5s;
+        outline: none;
+        border: 1px solid #6c3fd7;
+    }
+    button:hover{
+        border: 1px solid #6c3fd7;
+        color: #fff;
+        background-color: transparent;
+        transform: translateY(-5px);
+    }
+    
+    .container form::before{
+        content: "";
+        position: absolute;
+        background-color: #ffffff64;
+        width: 100px;
+        height: 100px;
+        top: 350px;
+        left: 21%;
+        border-radius: 50%;
+    }
+    
+    .wrapper {
+        max-width: 1200px;
+        margin:20px  auto;
+    }
+    h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 14px;
+        color: #ccc;
+    }
+    .section {
+        margin-bottom: 50px;
+    }
+    .testimonials, .faq {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .card {
+        background: #141414;
+        padding: 20px;
+        border-radius: 4px;
+        flex: 1;
+        min-width: 300px;
+        border: 1px solid #ffffff1d;
+    }
+    .stars {
+        color: gold;
+        font-size: 18px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    .faq .card {
+        text-align: left;
+    }
+    .btn {
+        display: inline-block;
+        background: #6c3fd7;
+        color: white;
+        padding: 8px 16px;
+        margin-top: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .btn:hover{
+        border: 1px solid #6c3fd7;
+         color: #6c3fd7;
+         background-color: transparent;
+    }
+    
+    .realestates {
+        max-width: 1200px;
+        margin: 10px auto;
+    }
+    h2 {
+        font-size: 38px;
+        margin: 10px 0;
+    }
+    p {
+        font-size: 14px;
+        color: #cccccc85;
+        font-size: smaller;
+    }
+    .listings {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .card {
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1;
+        min-width: 300px;
+        text-align: center;
+    }
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .details {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+    .details span {
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+        display: inline;
+        width: 80px;
+    }
+    .btn {
+        display: inline;
+        background: #6a0dad;
+        color: white;
+        padding: 10px 16px;
+        margin-top: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 200px;
+    } 
+    footer{
+        height: 200px;
+    }
+    .navbar {
+        background-color: #1a1a1a;
+        padding: 10px;
+        height: 90px;
+        
+    
+       
+      }
+      .navbar li a {
+        color: #fff;
+        font-size: smaller;
+        font-family: sans-serif;
+      } 
+      
+      .navbar-brand {
+        color: #eee;
+        font-size: 25px;
+      }
+      .navbar i{
+        background-color: #6a0dad;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      li a:hover{
+    color: #fff;
+     }
+     ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    .arrow{
+        color: #ccc;
+        padding: 10px;
+        background-color: #6a0dad;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 4px;
+        transition: 0.5s;
+        cursor: pointer;
+    
+    }
+    .arrow:hover{
+        background-color: #6c3fd7;
+    }
+    button a{text-decoration: none;
+    color: #ccc;}
+    .navbar-nav .nav-link {
+      color: #e0e0e0 !important;
+      margin-right: 15px;
+      transition: 0.3s;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #6c3fd7 !important;
+    }
+    a{color: #eee;}
+
+    </style>
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Propify</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./home.html"
+                  >Home</a
+                >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about us.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Browse_poperties.html">Properties</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./services.html">Services</a>
+            </li>
+            <a href="./profile.html"><i class="fa-solid fa-user"></i></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="left">
+        <h2>Discover Your Dream Property with Estatein</h2>
+        <p>
+          Your journey to finding the perfect property begins here. Explore our
+          listings to find the home that matches your dreams.
+        </p>
+        <div class="options">
+          <button type="button"><a href="./Browse_poperties.html">Browse Properties</a> </button>
+          <button type="button"><a href="./sell_property.html">Sell Property</a>  </button>
+          <button type="button"><a href="./BE_agent.html">become a dealer</a> </button>
+          <button type="button"><a href="./view_agents.html"> Our Dealers</a></button>
+        </div>
+        <div class="numbers">
+          <div class="number-of-lands">
+            <h3 id="prop"></h3>
+            <p>Properties For Clients</p>
+          </div>
+          <div class="number-of-realestate">
+            <h3 id="land"></h3>
+            <p>Properties For Clients</p>
+          </div>
+        </div>
+      </div>
+      <div class="right"></div>
+      <div class="circle">
+        <p>Propify</p>
+      </div>
+    </header>
+    <div class="realestates">
+      <h2>Expensive 3 real estate listed on the website.</h2>
+      <p>
+        Explore our selection of featured properties. Click "View Details" for
+        more information.
+      </p>
+      <div class="listings">
+        <div class="card">
+          <img src="../images//logo.PNG" alt="Seaside Serenity Villa" />
+          <h3>Seaside Serenity Villa</h3>
+          <p>
+            A stunning 4-bedroom, 3-bathroom villa in a peaceful neighborhood.
+          </p>
+          <div class="details">
+            <span>4-Bedroom</span>
+            <span>3-Bathroom</span>
+            <span>Villa</span>
+          </div>
+          <div class="footer">
+            <div class="price">$550,000</div>
+            <a href="./property.html" class="btn">View Property Details</a>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="../images//Real-estate-website-design.jpg"
+            alt="Metropolitan Haven"
+          />
+          <h3>Metropolitan Haven</h3>
+          <p>A chic and fully-furnished 2-bedroom apartment with city views.</p>
+          <div class="details">
+            <span>2-Bedroom</span>
+            <span>2-Bathroom</span>
+            <span>Apartment</span>
+          </div>
+          <div class="footer">
+            <div class="price">$550,000</div>
+            <a href="./property.html" class="btn">View Property Details</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../images//real-stste.jpg " alt="Rustic Retreat Cottage" />
+          <h3>Rustic Retreat Cottage</h3>
+          <p>
+            An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.
+          </p>
+          <div class="details">
+            <span>3-Bedroom</span>
+            <span>3-Bathroom</span>
+            <span>Townhouse</span>
+          </div>
+          <div class="footer">
+            <div class="price">$550,000</div>
+            <a href="./property.html" class="btn">View Property Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="section">
+        <h2>What Our Clients Say</h2>
+        <p>
+          Read the success stories and heartfelt testimonials from our valued
+          clients.
+        </p>
+        <div class="testimonials">
+          <div class="card">
+            <div class="stars">★★★★★</div>
+            <h3>Exceptional Service!</h3>
+            <p>Our experience was outstanding. Highly recommended!</p>
+            <small>Wade Warren, USA, California</small>
+          </div>
+          <div class="card">
+            <div class="stars">★★★★★</div>
+            <h3>Efficient and Reliable</h3>
+            <p>
+              They helped us sell our property quickly. We couldn't be happier!
+            </p>
+            <small>Emelie Thomson, USA, Florida</small>
+          </div>
+          <div class="card">
+            <div class="stars">★★★★★</div>
+            <h3>Trusted Advisors</h3>
+            <p>Their knowledge and commitment were impressive.</p>
+            <small>John Mans, USA, Nevada</small>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions about our services.</p>
+        <div class="faq">
+          <div class="card">
+            <h3>How do I search for properties?</h3>
+            <p>Learn how to use our user-friendly search tools.</p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+          <div class="card">
+            <h3>What documents do I need to sell?</h3>
+            <p>Find out about the necessary documentation.</p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+          <div class="card">
+            <h3>How can I contact an agent?</h3>
+            <p>Discover the different ways to get in touch.</p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="left-panel">
+        <div class="overlay-box"></div>
+      </div>
+      <div class="right-panel">
+        <form>
+          <div class="form-group inline">
+            <div>
+              <input type="text" placeholder="First Name" />
+            </div>
+            <div>
+              <input type="text" placeholder="Last Name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email" />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Write your message.."></textarea>
+          </div>
+          <div class="stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span
+            ><span>&#9733;</span><span>&#9733;</span>
+          </div>
+          <button type="submit">Send Comment</button>
+        </form>
+      </div>
+      <div class="arrow">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+    </div>
+    <footer class="text-center text-lg-start bg-body-dark text-muted">
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span style="color: #fff"
+            >Get connected with us on social networks:</span
+          >
+        </div>
+
+        <div>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-facebook-f" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-twitter" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-google" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-instagram" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-linkedin" style="color: #fff"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="color: #fff">
+            <i class="fab fa-github" style="color: #fff"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                <i class="fas fa-gem me-3" style="color: #fff"></i>Company name
+              </h6>
+              <p style="color: #fff">
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Products
+              </h6>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Angular</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">React</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Vue</a>
+              </p>
+              <p style="color: #fff">
+                <a href="#!" class="text-reset" style="color: #fff">Laravel</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset" style="color: #fff">Help</a>
+              </p>
+            </div>
+
+            <div
+              class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
+              style="color: #fff"
+            >
+              <h6 class="text-uppercase fw-bold mb-4" style="color: #fff">
+                Contact
+              </h6>
+              <p style="color: #fff">
+                <i class="fas fa-home me-3" style="color: #fff"></i> New York,
+                NY 10012, US
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-envelope me-3" style="color: #fff"></i>
+                info@example.com
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-phone me-3" style="color: #fff"></i> + 01 234
+                567 88
+              </p>
+              <p style="color: #fff">
+                <i class="fas fa-print me-3" style="color: #fff"></i> + 01 234
+                567 89
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+    </footer>
+    <script>
+      let num = 0;
+      function get() {
+        if (num < 20000) {
+          document.getElementById("prop").innerText = num;
+          document.getElementById("land").innerText = num;
+          num++;
+
+          setTimeout(get, 10);
+        }
+      }
+      get();
+    </script>
+    <script>
+      document.querySelector('.arrow').style.display = 'none';
+  
+      window.addEventListener('scroll', () => {
+          if (scrollY > 400) {
+              document.querySelector('.arrow').style.display = 'block';
+              document.querySelector('.arrow').onclick=()=>{
+                window.scrollTo(0,0)
+              }
+
+          } else {
+              document.querySelector('.arrow').style.display = 'none';
+          }
+      });
+  </script>
+  
+  </body>
+</html>
